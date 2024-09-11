@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('portfolios', function (Blueprint $table) {
-            $table->foreignId('user_id')->primary();
+            $table->foreignId('user_id')->constrained('users')->references('id')->primary();
             $table->text('description')->nullable();
             $table->string('social_media_links')->nullable();
             $table->string('skills')->nullable();

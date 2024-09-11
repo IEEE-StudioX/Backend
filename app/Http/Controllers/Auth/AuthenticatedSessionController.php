@@ -42,8 +42,7 @@ class AuthenticatedSessionController extends Controller
                 'access_token' => $token,
                 'token_type' => 'Bearer',
             ]);
-        try {
-        } catch (AuthenticationException $e) {
+        try {} catch (AuthenticationException $e) {
             return response()->json([
                 'status' => false,
                 'message' => 'Invalid credentials.',

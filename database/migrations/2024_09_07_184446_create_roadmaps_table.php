@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->string('category');
+            $table->foreignId('category_id')->constrained('categories')->references('id')->onDelete('cascade');
             $table->string('duration');
             $table->integer('price');
             $table->integer('enrollment_count')->default(0);

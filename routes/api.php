@@ -74,7 +74,7 @@ Route::middleware(['auth:sanctum','role:admin'])->group(function () {
 
     });
 });
-Route::middleware(['auth:sanctum','role:admin'])->group(function () {
+Route::middleware(['auth:sanctum','role:user'])->group(function () {
 
 
     Route::prefix('user')->group(function () {

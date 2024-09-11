@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jobs', function (Blueprint $table) {
+        Schema::create('xjobs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->constrained('categories')->references('id')->onDelete('cascade');
+
             $table->string('job_title');
             $table->text('job_description');
             $table->text('requirements');

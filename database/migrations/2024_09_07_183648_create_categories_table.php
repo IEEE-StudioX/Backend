@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('type');
+            $table->string('type');//jobs - roadmaps - projcet  project->categy  name type = jobs
         });
     }
 
